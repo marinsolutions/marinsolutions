@@ -22,8 +22,8 @@
   background:
     radial-gradient(
       ellipse at center,
-      rgba(92, 196, 157, 0.08) 0%,
-      rgba(92, 196, 157, 0.03) 20%,
+      rgba(0, 179, 255, 0.08) 0%,
+      rgba(0, 179, 255, 0.03) 20%,
       transparent 60%);
   pointer-events: none;
   z-index: 0;
@@ -79,10 +79,10 @@
 }
 .grow-process-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(92, 196, 157, 0.3);
+  border-color: rgba(0, 179, 255, 0.3);
   box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(92, 196, 157, 0.2),
+    0 0 0 1px rgba(0, 179, 255, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 .grow-process-card::before {
@@ -95,8 +95,8 @@
   background:
     linear-gradient(
       90deg,
-      #5CC49D 0%,
-      #4a9d7d 100%);
+      #00b3ff 0%,
+      #0088cc 100%);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -116,8 +116,8 @@
   background:
     linear-gradient(
       135deg,
-      #5CC49D 0%,
-      #4a9d7d 100%);
+      #00b3ff 0%,
+      #0088cc 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -126,7 +126,7 @@
   font-weight: 800;
   color: white;
   flex-shrink: 0;
-  box-shadow: 0 4px 20px rgba(92, 196, 157, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 179, 255, 0.3);
 }
 .grow-process-title {
   font-size: 1.8rem;
@@ -163,7 +163,7 @@
 .grow-process-check {
   flex-shrink: 0;
   margin-top: 0.2rem;
-  filter: drop-shadow(0 0 4px rgba(92, 196, 157, 0.5));
+  filter: drop-shadow(0 0 4px rgba(0, 179, 255, 0.5));
 }
 .grow-process-bullets li span {
   flex: 1;

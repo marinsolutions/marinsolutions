@@ -63,7 +63,7 @@
   background: transparent;
 }
 .pill.is-active {
-  background: #5CC49D !important;
+  background: #00b3ff !important;
   color: #FAFBFF !important;
 }
 .pill.is-active .hover-circle {
@@ -82,7 +82,7 @@
   overflow: visible;
 }
 .pill-cta {
-  background: #5CC49D !important;
+  background: #00b3ff !important;
   color: #FAFBFF !important;
 }
 .pill-cta .hover-circle {
@@ -115,7 +115,7 @@
   position: absolute;
   left: 50%;
   bottom: 0;
-  background: #5CC49D;
+  background: #00b3ff;
   border-radius: 50%;
   pointer-events: none;
   will-change: transform;
@@ -187,8 +187,8 @@
 }
 .mobile-menu-link:hover,
 .mobile-menu-link.is-active {
-  background: rgba(92, 196, 157, 0.2);
-  color: #5CC49D;
+  background: rgba(0, 179, 255, 0.2);
+  color: #00b3ff;
 }
 .desktop-only {
   display: block;

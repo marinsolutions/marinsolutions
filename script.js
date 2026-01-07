@@ -117,14 +117,6 @@ if (playbookForm) {
         // Simulate form submission
         showMessage('Thank you! Your playbook is being sent to your email.', 'success');
         this.reset();
-        
-        // Track conversion (if analytics is set up)
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'form_submit', {
-                'event_category': 'engagement',
-                'event_label': 'playbook_download'
-            });
-        }
     });
 }
 
@@ -338,24 +330,6 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-// Analytics tracking (if Google Analytics is loaded)
-function trackEvent(category, action, label) {
-    if (typeof gtag !== 'undefined') {
-        gtag('event', action, {
-            'event_category': category,
-            'event_label': label
-        });
-    }
-}
-
-// Track button clicks
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        const text = btn.textContent.trim();
-        trackEvent('engagement', 'button_click', text);
-    });
-});
-
 // Ensure resources button always works
 document.addEventListener('DOMContentLoaded', function() {
     const resourcesBtn = document.getElementById('access-resources-btn');
@@ -365,14 +339,6 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'resources.html';
         });
     }
-});
-
-// Track form interactions
-document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', (e) => {
-        const formType = form.classList.contains('playbook-form') ? 'playbook' : 'contact';
-        trackEvent('form', 'submit', formType);
-    });
 });
 
 console.log('Marin Solutions website loaded successfully!');

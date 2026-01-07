@@ -20,7 +20,7 @@
       card.classList.add('card-spotlight');
       
       // Set the default spotlight color
-      card.style.setProperty('--spotlight-color', 'rgba(92, 196, 157, 0.25)');
+      card.style.setProperty('--spotlight-color', 'rgba(0, 179, 255, 0.25)');
       
       // Add mouse move handler
       const handleMouseMove = (e) => {

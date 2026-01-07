@@ -22,8 +22,8 @@ const items = [
     title: "Jacob Arnold",
     subtitle: "CEO & Founder",
     handle: "@thejakearnold",
-    borderColor: "#5CC49D",
-    gradient: "linear-gradient(145deg, #5CC49D, #000)",
+    borderColor: "#00b3ff",
+    gradient: "linear-gradient(145deg, #00b3ff, #000)",
     url: ""
   },
   {
@@ -31,8 +31,8 @@ const items = [
     title: "Andrew Mudd",
     subtitle: "CTO",
     handle: "@itsandymudd",
-    borderColor: "#5CC49D",
-    gradient: "linear-gradient(180deg, #5CC49D, #000)",
+    borderColor: "#00b3ff",
+    gradient: "linear-gradient(180deg, #00b3ff, #000)",
     url: ""
   }
 ];

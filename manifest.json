@@ -4,8 +4,8 @@
     "description": "We help entrepreneurs build and grow successful AI businesses",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#0a0a0a",
-    "theme_color": "#5CC49D",
+    "background_color": "#0a1628",
+    "theme_color": "#00b3ff",
     "orientation": "portrait-primary",
     "icons": [
         {

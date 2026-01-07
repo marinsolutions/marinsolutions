@@ -95,7 +95,7 @@ if (typeof window !== 'undefined') {
         activeHref: activeHref,
         initialLoadAnimation: true,
         baseColor: '#FAFBFF',
-        pillColor: '#5CC49D',
+        pillColor: '#00b3ff',
         hoveredPillTextColor: '#FAFBFF',
         pillTextColor: '#FAFBFF',
         ease: 'power3.easeOut',
