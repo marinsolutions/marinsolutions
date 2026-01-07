@@ -1,0 +1,40 @@
+{
+  "name": "grow-ai",
+  "version": "1.0.0",
+  "description": "A modern, responsive website for Marin Solutions - AI automation solutions for Law Firms, CPA Practices, and Consulting Businesses.",
+  "main": "about-script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "python3 -m http.server 8080",
+    "build:beams-bg": "esbuild beams-background.js --bundle --format=iife --outfile=beams-background-bundle.js --jsx=automatic --loader:.css=css",
+    "build:gradient": "esbuild gradient-text.js --bundle --format=iife --outfile=gradient-text-bundle.js --jsx=automatic",
+    "build:pillnav": "esbuild pill-nav.js --bundle --format=iife --outfile=pill-nav-bundle.js --jsx=automatic",
+    "build:spotlight": "esbuild spotlight-card.js --bundle --format=iife --outfile=spotlight-card-bundle.js --jsx=automatic",
+    "build:chroma": "esbuild chroma-grid.js --bundle --format=iife --outfile=chroma-grid-bundle.js --jsx=automatic --loader:.css=css",
+    "build:beams": "esbuild beams.js --bundle --format=iife --outfile=beams-bundle.js --jsx=automatic"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OfferLaunch/growaiagency.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OfferLaunch/growaiagency/issues"
+  },
+  "homepage": "https://github.com/OfferLaunch/growaiagency#readme",
+  "devDependencies": {
+    "esbuild": "^0.27.2",
+    "shadcn": "^3.6.2"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "gsap": "^3.14.2",
+    "motion": "^12.23.26",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "three": "^0.182.0"
+  }
+}

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Process - Marin Solutions</title>
+    
+    <!-- Cache Control Meta Tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="Learn about our 4-step process: Audit, Blueprint, Build, and Train. We transform your practice with custom AI automation solutions.">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#5CC49D">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Marin Solutions">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="script.js?v=1759850000" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" as="style" crossorigin>
+    
+    <!-- Critical CSS - Inline for faster rendering -->
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Manrope', sans-serif; 
+            background: #0a0a0a; 
+            color: #FAFBFF; 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden;
+        }
+        
+        /* Navbar Styles */
+        .navbar { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            z-index: 1000; 
+            background: rgba(10, 10, 10, 0.95); 
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .nav-container { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            height: 80px; 
+        }
+        .nav-logo { 
+            display: flex; 
+            align-items: center; 
+        }
+        .nav-logo a { 
+            display: flex; 
+            align-items: center; 
+            text-decoration: none; 
+        }
+        .nav-logo-img { 
+            height: 40px; 
+            width: auto; 
+            display: block; 
+        }
+        .nav-menu { 
+            display: flex; 
+            list-style: none; 
+            margin: 0; 
+            padding: 0; 
+            gap: 2rem; 
+            align-items: center; 
+        }
+        .nav-menu li { 
+            margin: 0; 
+        }
+        .nav-menu a { 
+            color: rgba(250, 251, 255, 0.8); 
+            text-decoration: none; 
+            font-weight: 500; 
+            font-size: 1rem; 
+            transition: color 0.3s ease; 
+            padding: 0.5rem 0; 
+        }
+        .nav-menu a:hover { 
+            color: #5CC49D; 
+        }
+        .nav-menu a.active { 
+            color: #5CC49D; 
+        }
+        .nav-menu .cta-button { 
+            background: linear-gradient(135deg, #5CC49D 0%, #4a9d7d 100%); 
+            color: #FAFBFF !important; 
+            padding: 0.75rem 1.5rem; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            transition: all 0.3s ease; 
+        }
+        .nav-menu .cta-button:hover { 
+            background: linear-gradient(135deg, #FFFFFF 0%, #f0f0f0 100%); 
+            color: #000000 !important; 
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); 
+        }
+        .hamburger { 
+            display: none; 
+            flex-direction: column; 
+            cursor: pointer; 
+            gap: 5px; 
+            padding: 0.5rem; 
+        }
+        .hamburger span { 
+            width: 25px; 
+            height: 3px; 
+            background: #FAFBFF; 
+            transition: 0.3s; 
+            border-radius: 2px; 
+        }
+        @media (max-width: 768px) { 
+            .hamburger { display: flex; }
+            .nav-menu { 
+                position: fixed; 
+                top: 80px; 
+                left: 0; 
+                right: 0; 
+                background: rgba(10, 10, 10, 0.98); 
+                backdrop-filter: blur(20px); 
+                flex-direction: column; 
+                padding: 2rem; 
+                gap: 1rem; 
+                transform: translateX(-100%); 
+                transition: transform 0.3s ease; 
+            }
+            .nav-menu.active { 
+                transform: translateX(0); 
+            }
+            .nav-menu li { 
+                width: 100%; 
+            }
+            .nav-menu a { 
+                display: block; 
+                padding: 1rem; 
+                border-radius: 8px; 
+            }
+            .nav-menu a:hover { 
+                background: rgba(92, 196, 157, 0.1); 
+            }
+        }
+        
+        /* Page Header */
+        .page-header {
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin-top: 80px;
+        }
+        .page-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .page-header p {
+            font-size: 1.25rem;
+            color: rgba(250, 251, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* How We Work Section - Horizontal Process Flow */
+        .how-we-work {
+            padding: 80px 0;
+            position: relative;
+            z-index: 1;
+            background: transparent;
+        }
+        .how-we-work-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .process-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            margin: 3rem 0;
+            gap: 2rem;
+        }
+        .process-flow::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: linear-gradient(90deg, #5CC49D 0%, rgba(92, 196, 157, 0.3) 50%, #5CC49D 100%);
+            z-index: 0;
+        }
+        .process-step {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 0.5rem;
+        }
+        .step-number {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #5CC49D 0%, #4a9d7d 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 30px rgba(92, 196, 157, 0.4);
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        .process-step:hover .step-number {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(92, 196, 157, 0.6);
+        }
+        .step-content {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 320px;
+            transition: all 0.3s ease;
+            position: relative;
+            min-height: 200px;
+        }
+        .process-step:hover .step-content {
+            transform: translateY(-5px);
+            border-color: rgba(92, 196, 157, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .step-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #5CC49D 0%, #4a9d7d 100%);
+            border-radius: 20px 20px 0 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .process-step:hover .step-content::before {
+            transform: scaleX(1);
+        }
+        .step-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .step-description {
+            color: rgba(250, 251, 255, 0.7);
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+        
+        /* Detailed Process Section */
+        .detailed-process {
+            padding: 80px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .detailed-process-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .process-detail-card {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            transition: all 0.3s ease;
+        }
+        .process-detail-card:hover {
+            border-color: rgba(92, 196, 157, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .process-detail-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .process-detail-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #5CC49D 0%, #4a9d7d 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 8px 30px rgba(92, 196, 157, 0.4);
+        }
+        .process-detail-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #FAFBFF;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+        .process-detail-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .process-detail-description {
+            color: rgba(250, 251, 255, 0.8);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .process-detail-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .process-detail-features li {
+            color: rgba(250, 251, 255, 0.7);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            font-size: 1.05rem;
+        }
+        .process-detail-features li::before {
+            content: '✓';
+            color: #5CC49D;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+        
+        /* CTA Section */
+        .process-cta {
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .process-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .process-cta p {
+            font-size: 1.25rem;
+            color: rgba(250, 251, 255, 0.7);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            font-family: 'Manrope', sans-serif;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #5CC49D 0%, #4a9d7d 100%);
+            color: #FAFBFF;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #FFFFFF 0%, #f0f0f0 100%);
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 60px 0 30px;
+            background: rgba(10, 10, 10, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 1;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+        }
+        .footer-section h4 {
+            color: #FAFBFF;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .footer-section p {
+            color: rgba(250, 251, 255, 0.7);
+            line-height: 1.6;
+        }
+        .footer-logo {
+            height: 40px;
+            width: auto;
+            margin-bottom: 1rem;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-section ul li a {
+            color: rgba(250, 251, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-section ul li a:hover {
+            color: #5CC49D;
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(250, 251, 255, 0.7);
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            background: rgba(92, 196, 157, 0.2);
+            border-color: rgba(92, 196, 157, 0.3);
+            color: #5CC49D;
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            flex-wrap: wrap;
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .footer-bottom p {
+            color: rgba(250, 251, 255, 0.6);
+            margin: 0;
+        }
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .footer-links a {
+            color: rgba(250, 251, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #5CC49D;
+        }
+        .separator {
+            color: rgba(250, 251, 255, 0.3);
+        }
+        
+        @media (max-width: 1200px) {
+            .process-flow {
+                flex-wrap: wrap;
+                gap: 3rem;
+            }
+            .process-flow::before {
+                display: none;
+            }
+            .process-step {
+                flex: 0 0 calc(50% - 1.5rem);
+            }
+            .process-detail-content {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+            .process-flow {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            .process-step {
+                flex: 1;
+                width: 100%;
+                max-width: 100%;
+            }
+            .step-content {
+                max-width: 100%;
+            }
+            .step-number {
+                width: 100px;
+                height: 100px;
+                font-size: 2rem;
+            }
+            .process-detail-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .process-detail-title {
+                font-size: 2rem;
+            }
+            .process-cta h2 {
+                font-size: 2rem;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Non-critical CSS - Load asynchronously -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Tracking Script -->
+    <script src="https://tr.growaiagency.io/api/v1/tracking.js"></script>
+    
+</head>
+<body>
+    <!-- Beams Background for all pages -->
+    <div class="page-background">
+        <div id="beams-background" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 0; overflow: visible; pointer-events: none;">
+            <!-- Beams background will be rendered here -->
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="images/logos/white and green.png" alt="Marin Solutions" class="nav-logo-img" loading="eager">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="process" class="active">Process</a></li>
+                <li><a href="about">About Us</a></li>
+                <li><a href="https://go.growaiagency.io/w-app?utm_source=Website&utm_medium=web&utm_content=process&el=Website-Process" class="cta-button">Get in touch</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="how-we-work-container">
+            <h1>Our Process</h1>
+            <p>A streamlined 4-step approach to transform your practice with custom AI automation solutions</p>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="how-we-work">
+        <div class="how-we-work-container">
+            <div class="process-flow">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Audit</h3>
+                        <p class="step-description">We analyze your current billable vs. non-billable hours.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Blueprint</h3>
+                        <p class="step-description">We design a custom AI architecture for your firm.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Build</h3>
+                        <p class="step-description">We develop and integrate the agents and automations.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Train</h3>
+                        <p class="step-description">We teach your team how to leverage the new tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Process Section -->
+    <section class="detailed-process">
+        <div class="detailed-process-container">
+            <div class="process-detail-card">
+                <div class="process-detail-header">
+                    <div class="process-detail-number">01</div>
+                    <h2 class="process-detail-title">Audit</h2>
+                </div>
+                <div class="process-detail-content">
+                    <div class="process-detail-description">
+                        <p>We start by conducting a comprehensive analysis of your current operations. Our team examines your workflows, identifies time-consuming manual processes, and calculates the true cost of non-billable hours. This deep dive helps us understand exactly where AI automation will deliver the most value.</p>
+                    </div>
+                    <ul class="process-detail-features">
+                        <li>Time tracking analysis of billable vs. non-billable hours</li>
+                        <li>Workflow documentation and process mapping</li>
+                        <li>Identification of automation opportunities</li>
+                        <li>ROI projections and impact assessment</li>
+                        <li>Current tool and system audit</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="process-detail-card">
+                <div class="process-detail-header">
+                    <div class="process-detail-number">02</div>
+                    <h2 class="process-detail-title">Blueprint</h2>
+                </div>
+                <div class="process-detail-content">
+                    <div class="process-detail-description">
+                        <p>Based on our audit findings, we design a custom AI architecture tailored specifically to your firm's needs. We create detailed implementation plans, select the right AI tools and platforms, and ensure seamless integration with your existing systems. This blueprint becomes your roadmap to automation success.</p>
+                    </div>
+                    <ul class="process-detail-features">
+                        <li>Custom AI solution architecture design</li>
+                        <li>Tool selection and platform recommendations</li>
+                        <li>Integration planning with existing systems</li>
+                        <li>Detailed implementation roadmap</li>
+                        <li>Security and compliance considerations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="process-detail-card">
+                <div class="process-detail-header">
+                    <div class="process-detail-number">03</div>
+                    <h2 class="process-detail-title">Build</h2>
+                </div>
+                <div class="process-detail-content">
+                    <div class="process-detail-description">
+                        <p>Our development team brings the blueprint to life. We build custom AI agents, configure automation workflows, and integrate everything with your existing software. Throughout the build phase, we maintain strict security standards and ensure compliance with industry regulations. Your team can focus on client work while we handle the technical implementation.</p>
+                    </div>
+                    <ul class="process-detail-features">
+                        <li>Custom AI agent development</li>
+                        <li>Automation workflow configuration</li>
+                        <li>System integration and API connections</li>
+                        <li>Security and compliance implementation</li>
+                        <li>Testing and quality assurance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="process-detail-card">
+                <div class="process-detail-header">
+                    <div class="process-detail-number">04</div>
+                    <h2 class="process-detail-title">Train</h2>
+                </div>
+                <div class="process-detail-content">
+                    <div class="process-detail-description">
+                        <p>We ensure your team is fully equipped to leverage the new AI tools. Our comprehensive training program includes hands-on sessions, detailed documentation, and ongoing support. We don't just hand over the keys—we make sure everyone knows how to use them effectively to maximize your ROI.</p>
+                    </div>
+                    <ul class="process-detail-features">
+                        <li>Comprehensive team training sessions</li>
+                        <li>Detailed documentation and user guides</li>
+                        <li>Best practices and optimization tips</li>
+                        <li>Ongoing support and troubleshooting</li>
+                        <li>Regular system updates and improvements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="process-cta">
+        <div class="detailed-process-container">
+            <h2>Ready to Transform Your Practice?</h2>
+            <p>Let's start with an audit of your current workflow and identify where AI can save you the most time</p>
+            <a href="https://go.growaiagency.io/w-app?utm_source=Website&utm_medium=web&utm_content=process&el=Website-Process" class="btn btn-primary">
+                <span>Schedule Your Free Audit</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="images/logos/All white.png" alt="Marin Solutions" class="footer-logo" loading="lazy">
+                <p>Implementing AI solutions for Law Firms, CPA Practices, and Consulting Businesses.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="process">Process</a></li>
+                    <li><a href="about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="https://go.growaiagency.io/w-app?utm_source=Website&utm_medium=web&utm_content=process&el=Website-Process">Get in touch</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61579044325984" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/thejakearnold" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Marin Solutions | All Rights Reserved</p>
+            <div class="footer-links">
+                <a href="privacy-policy">Privacy Policy</a>
+                <span class="separator">•</span>
+                <a href="terms-of-service">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Critical JavaScript - Load immediately -->
+    <script src="script.js?v=1759850000"></script>
+    
+    <!-- Beams Background Bundle (built with npm run build:beams-bg) -->
+    <link rel="stylesheet" href="beams-background-bundle.css">
+    <script src="beams-background-bundle.js"></script>
+    
+    <!-- Non-critical JavaScript - Load asynchronously -->
+    <script>
+        // Lazy load AOS and other non-critical scripts
+        function loadNonCriticalScripts() {
+            const aosScript = document.createElement('script');
+            aosScript.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+            aosScript.async = true;
+            aosScript.onload = function() {
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 800,
+                        easing: 'ease-in-out',
+                        once: true,
+                        offset: 100
+                    });
+                }
+            };
+            document.head.appendChild(aosScript);
+        }
+        
+        // Load non-critical scripts after page load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadNonCriticalScripts);
+        } else {
+            loadNonCriticalScripts();
+        }
+    </script>
+</body>
+</html>
+

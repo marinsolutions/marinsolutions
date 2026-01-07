@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marin Solutions - AI Solutions for Law Firms, CPAs & Consultants</title>
+    
+    <!-- Cache Control Meta Tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="description" content="Transform your law firm, CPA practice, or consulting business with custom AI solutions. We implement AI automation that saves time, reduces costs, and scales your operations.">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#5CC49D">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Marin Solutions">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Marin Solutions - AI Solutions for Law Firms, CPAs & Consultants">
+    <meta property="og:description" content="Transform your law firm, CPA practice, or consulting business with custom AI solutions. We implement AI automation that saves time, reduces costs, and scales your operations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://marinsolutions.com">
+    <meta property="og:image" content="images/logos/white and green.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marin Solutions - AI Solutions for Law Firms, CPAs & Consultants">
+    <meta name="twitter:description" content="Transform your professional practice with custom AI solutions that save time and scale your operations.">
+    <meta name="twitter:image" content="images/logos/white and green.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logos/white and green.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/logos/white and green.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/logos/white and green.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="styles.css?v=1759850000" as="style">
+    <link rel="preload" href="script.js?v=1759850000" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" as="style" crossorigin>
+    
+    <!-- Critical CSS - Inline for faster rendering -->
+    <style>
+        /* Critical above-the-fold styles */
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Manrope', sans-serif; 
+            background: #0a0a0a; 
+            color: #FAFBFF; 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden;
+        }
+        
+        /* Navbar Styles */
+        .navbar { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            z-index: 1000; 
+            background: rgba(10, 10, 10, 0.95); 
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .nav-container { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            height: 80px; 
+        }
+        .nav-logo { 
+            display: flex; 
+            align-items: center; 
+        }
+        .nav-logo a { 
+            display: flex; 
+            align-items: center; 
+            text-decoration: none; 
+        }
+        .nav-logo-img { 
+            height: 40px; 
+            width: auto; 
+            display: block; 
+        }
+        .nav-menu { 
+            display: flex; 
+            list-style: none; 
+            margin: 0; 
+            padding: 0; 
+            gap: 2rem; 
+            align-items: center; 
+        }
+        .nav-menu li { 
+            margin: 0; 
+        }
+        .nav-menu a { 
+            color: rgba(250, 251, 255, 0.8); 
+            text-decoration: none; 
+            font-weight: 500; 
+            font-size: 1rem; 
+            transition: color 0.3s ease; 
+            padding: 0.5rem 0; 
+        }
+        .nav-menu a:hover { 
+            color: #5CC49D; 
+        }
+        .nav-menu a.active { 
+            color: #5CC49D; 
+        }
+        .nav-menu .cta-button { 
+            background: linear-gradient(135deg, #5CC49D 0%, #4a9d7d 100%); 
+            color: #FAFBFF !important; 
+            padding: 0.75rem 1.5rem; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            transition: all 0.3s ease; 
+        }
+        .nav-menu .cta-button:hover { 
+            background: linear-gradient(135deg, #FFFFFF 0%, #f0f0f0 100%); 
+            color: #000000 !important; 
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3); 
+        }
+        .hamburger { 
+            display: none; 
+            flex-direction: column; 
+            cursor: pointer; 
+            gap: 5px; 
+            padding: 0.5rem; 
+        }
+        .hamburger span { 
+            width: 25px; 
+            height: 3px; 
+            background: #FAFBFF; 
+            transition: 0.3s; 
+            border-radius: 2px; 
+        }
+        @media (max-width: 768px) { 
+            .hamburger { display: flex; }
+            .nav-menu { 
+                position: fixed; 
+                top: 80px; 
+                left: 0; 
+                right: 0; 
+                background: rgba(10, 10, 10, 0.98); 
+                backdrop-filter: blur(20px); 
+                flex-direction: column; 
+                padding: 2rem; 
+                gap: 1rem; 
+                transform: translateX(-100%); 
+                transition: transform 0.3s ease; 
+            }
+            .nav-menu.active { 
+                transform: translateX(0); 
+            }
+            .nav-menu li { 
+                width: 100%; 
+            }
+            .nav-menu a { 
+                display: block; 
+                padding: 1rem; 
+                border-radius: 8px; 
+            }
+            .nav-menu a:hover { 
+                background: rgba(92, 196, 157, 0.1); 
+            }
+        }
+        
+        /* Hero Layout Styles */
+        .hero { 
+            position: relative; 
+            min-height: calc(100vh - 80px); 
+            display: flex; 
+            align-items: center; 
+            padding: 100px 0 60px; 
+            z-index: 1; 
+            margin-top: 80px;
+        }
+        .hero-container { max-width: 1400px; margin: 0 auto; padding: 0 20px; width: 100%; }
+        .hero-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .hero-content { text-align: left; }
+        .hero-title { font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; color: #FAFBFF; letter-spacing: -0.02em; }
+        .hero-subtitle { font-size: 1.25rem; line-height: 1.6; color: rgba(250, 251, 255, 0.8); margin-bottom: 2.5rem; max-width: 600px; }
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .hero-visual { display: flex; justify-content: flex-end; align-items: center; }
+        
+        /* Dashboard Mockup Styles */
+        .dashboard-mockup { 
+            background: rgba(10, 10, 10, 0.8); 
+            backdrop-filter: blur(20px); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 24px; 
+            padding: 1.5rem; 
+            width: 100%; 
+            max-width: 500px; 
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(92, 196, 157, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .dashboard-header { 
+            display: flex; 
+            align-items: center; 
+            gap: 1rem; 
+            margin-bottom: 1.5rem; 
+            padding-bottom: 1rem; 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+        }
+        .dashboard-dots { 
+            display: flex; 
+            gap: 0.5rem; 
+        }
+        .dashboard-dots span { 
+            width: 12px; 
+            height: 12px; 
+            border-radius: 50%; 
+            background: rgba(255, 255, 255, 0.3); 
+        }
+        .dashboard-dots span:nth-child(1) { background: #ff5f57; }
+        .dashboard-dots span:nth-child(2) { background: #ffbd2e; }
+        .dashboard-dots span:nth-child(3) { background: #28ca42; }
+        .dashboard-title { 
+            color: rgba(250, 251, 255, 0.7); 
+            font-size: 0.9rem; 
+            font-weight: 500; 
+        }
+        .dashboard-content { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 1.5rem; 
+        }
+        .dashboard-stat-card { 
+            background: linear-gradient(135deg, rgba(92, 196, 157, 0.15) 0%, rgba(92, 196, 157, 0.05) 100%); 
+            border: 1px solid rgba(92, 196, 157, 0.2); 
+            border-radius: 16px; 
+            padding: 1.5rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 1rem; 
+        }
+        .stat-icon { 
+            width: 60px; 
+            height: 60px; 
+            background: linear-gradient(135deg, #5CC49D 0%, #4a9d7d 100%); 
+            border-radius: 12px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 1.5rem; 
+            color: white; 
+            box-shadow: 0 4px 20px rgba(92, 196, 157, 0.3); 
+        }
+        .stat-info { 
+            flex: 1; 
+        }
+        .stat-label { 
+            color: rgba(250, 251, 255, 0.6); 
+            font-size: 0.9rem; 
+            font-weight: 500; 
+            margin-bottom: 0.5rem; 
+        }
+        .stat-value { 
+            color: #FAFBFF; 
+            font-size: 2.5rem; 
+            font-weight: 800; 
+            line-height: 1; 
+        }
+        .stat-unit { 
+            font-size: 1rem; 
+            font-weight: 500; 
+            color: rgba(250, 251, 255, 0.7); 
+            margin-left: 0.25rem; 
+        }
+        .dashboard-chart { 
+            display: flex; 
+            align-items: flex-end; 
+            gap: 0.75rem; 
+            height: 120px; 
+            padding: 1rem; 
+            background: rgba(0, 0, 0, 0.3); 
+            border-radius: 12px; 
+        }
+        .chart-bar { 
+            flex: 1; 
+            background: linear-gradient(180deg, #5CC49D 0%, #4a9d7d 100%); 
+            border-radius: 4px 4px 0 0; 
+            animation: growBar 1s ease-out forwards; 
+            opacity: 0; 
+        }
+        @keyframes growBar {
+            from { 
+                opacity: 0; 
+                transform: scaleY(0); 
+            }
+            to { 
+                opacity: 1; 
+                transform: scaleY(1); 
+            }
+        }
+        .dashboard-metrics { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 1rem; 
+        }
+        .metric-item { 
+            background: rgba(255, 255, 255, 0.03); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            border-radius: 12px; 
+            padding: 1rem; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 0.5rem; 
+        }
+        .metric-label { 
+            color: rgba(250, 251, 255, 0.6); 
+            font-size: 0.85rem; 
+        }
+        .metric-value { 
+            color: #5CC49D; 
+            font-size: 1.5rem; 
+            font-weight: 700; 
+        }
+        
+        /* Responsive Hero */
+        @media (max-width: 1024px) {
+            .hero-layout { grid-template-columns: 1fr; gap: 3rem; }
+            .hero-visual { justify-content: center; }
+            .hero-title { font-size: 2.5rem; }
+        }
+        @media (max-width: 768px) {
+            .hero { min-height: auto; padding: 100px 0 60px; }
+            .hero-title { font-size: 2rem; }
+            .hero-subtitle { font-size: 1.1rem; }
+            .hero-buttons { flex-direction: column; }
+            .hero-buttons .btn { width: 100%; justify-content: center; }
+            .dashboard-mockup { max-width: 100%; }
+        }
+        
+        /* How We Work Section - Horizontal Process Flow */
+        .how-we-work {
+            padding: 60px 0;
+            position: relative;
+            z-index: 1;
+            background: transparent;
+        }
+        .how-we-work-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .how-we-work-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .how-we-work-header h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .how-we-work-header p {
+            font-size: 1.25rem;
+            color: rgba(250, 251, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .process-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            margin: 3rem 0;
+            gap: 2rem;
+        }
+        .process-flow::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: linear-gradient(90deg, #5CC49D 0%, rgba(92, 196, 157, 0.3) 50%, #5CC49D 100%);
+            z-index: 0;
+        }
+        .process-step {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 0.5rem;
+        }
+        .step-number {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #5CC49D 0%, #4a9d7d 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 30px rgba(92, 196, 157, 0.4);
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        .process-step:hover .step-number {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(92, 196, 157, 0.6);
+        }
+        .step-content {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 280px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .process-step:hover .step-content {
+            transform: translateY(-5px);
+            border-color: rgba(92, 196, 157, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .step-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #5CC49D 0%, #4a9d7d 100%);
+            border-radius: 20px 20px 0 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .process-step:hover .step-content::before {
+            transform: scaleX(1);
+        }
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .step-description {
+            color: rgba(250, 251, 255, 0.7);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 1200px) {
+            .process-flow {
+                flex-wrap: wrap;
+                gap: 3rem;
+            }
+            .process-flow::before {
+                display: none;
+            }
+            .process-step {
+                flex: 0 0 calc(50% - 1.5rem);
+            }
+        }
+        @media (max-width: 768px) {
+            .how-we-work {
+                padding: 60px 0;
+            }
+            .how-we-work-header h2 {
+                font-size: 2rem;
+            }
+            .how-we-work-header p {
+                font-size: 1.1rem;
+            }
+            .process-flow {
+                flex-direction: column;
+                gap: 3rem;
+            }
+            .process-step {
+                flex: 1;
+                width: 100%;
+                max-width: 100%;
+            }
+            .step-content {
+                max-width: 100%;
+            }
+            .step-number {
+                width: 100px;
+                height: 100px;
+                font-size: 2rem;
+            }
+        }
+        
+        /* Global Section Styles */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: rgba(250, 251, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            font-family: 'Manrope', sans-serif;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #5CC49D 0%, #4a9d7d 100%);
+            color: #FAFBFF;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #FFFFFF 0%, #f0f0f0 100%);
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FAFBFF;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(92, 196, 157, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        /* Industries Section */
+        .industries {
+            padding: 60px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .industry-card {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        .industry-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(92, 196, 157, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .industry-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(92, 196, 157, 0.2) 0%, rgba(92, 196, 157, 0.1) 100%);
+            border: 1px solid rgba(92, 196, 157, 0.3);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: #5CC49D;
+            font-size: 1.5rem;
+        }
+        .industry-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+        }
+        .industry-card > p {
+            color: rgba(250, 251, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .industry-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .industry-features li {
+            color: rgba(250, 251, 255, 0.7);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        .industry-features li i {
+            color: #5CC49D;
+            margin-top: 0.25rem;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 60px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .benefit-card {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(92, 196, 157, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(92, 196, 157, 0.2) 0%, rgba(92, 196, 157, 0.1) 100%);
+            border: 1px solid rgba(92, 196, 157, 0.3);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: #5CC49D;
+            font-size: 1.5rem;
+        }
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+        }
+        .benefit-card p {
+            color: rgba(250, 251, 255, 0.7);
+            line-height: 1.6;
+        }
+        
+        /* Case Studies Section */
+        .case-studies {
+            padding: 60px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .case-study-card {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(92, 196, 157, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .case-study-category {
+            display: inline-block;
+            background: rgba(92, 196, 157, 0.15);
+            color: #5CC49D;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .case-study-card h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .story-excerpt {
+            color: rgba(250, 251, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .case-study-metrics {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .metric {
+            display: flex;
+            flex-direction: column;
+        }
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #5CC49D;
+            line-height: 1;
+        }
+        .metric-label {
+            font-size: 0.9rem;
+            color: rgba(250, 251, 255, 0.6);
+            margin-top: 0.5rem;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            padding: 80px 0;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .cta-content h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .cta-content p {
+            font-size: 1.1rem;
+            color: rgba(250, 251, 255, 0.7);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 60px 0 30px;
+            background: rgba(10, 10, 10, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            z-index: 1;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        .footer-section h4 {
+            color: #FAFBFF;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .footer-section p {
+            color: rgba(250, 251, 255, 0.7);
+            line-height: 1.6;
+        }
+        .footer-logo {
+            height: 40px;
+            width: auto;
+            margin-bottom: 1rem;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+        .footer-section ul li a {
+            color: rgba(250, 251, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-section ul li a:hover {
+            color: #5CC49D;
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(250, 251, 255, 0.7);
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            background: rgba(92, 196, 157, 0.2);
+            border-color: rgba(92, 196, 157, 0.3);
+            color: #5CC49D;
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-bottom p {
+            color: rgba(250, 251, 255, 0.6);
+            margin: 0;
+        }
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .footer-links a {
+            color: rgba(250, 251, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-links a:hover {
+            color: #5CC49D;
+        }
+        .separator {
+            color: rgba(250, 251, 255, 0.3);
+        }
+        
+        /* Responsive Grid Adjustments */
+        @media (max-width: 1024px) {
+            .industries-grid,
+            .benefits-grid,
+            .case-studies-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .industries-grid,
+            .benefits-grid,
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* What We Do Section - Tab Component */
+        .what-we-do {
+            padding: 60px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .what-we-do-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .what-we-do-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .what-we-do-header h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .what-we-do-header p {
+            font-size: 1.25rem;
+            color: rgba(250, 251, 255, 0.7);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .tab-container {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+        }
+        .tab-button {
+            flex: 1;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: none;
+            color: rgba(250, 251, 255, 0.6);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+            font-family: 'Manrope', sans-serif;
+        }
+        .tab-button:hover {
+            color: rgba(250, 251, 255, 0.9);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .tab-button.active {
+            color: #FAFBFF;
+            background: rgba(92, 196, 157, 0.15);
+        }
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #5CC49D 0%, #4a9d7d 100%);
+            border-radius: 2px 2px 0 0;
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .service-card {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #5CC49D 0%, #4a9d7d 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(92, 196, 157, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(92, 196, 157, 0.2);
+        }
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(92, 196, 157, 0.2) 0%, rgba(92, 196, 157, 0.1) 100%);
+            border: 1px solid rgba(92, 196, 157, 0.3);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: #5CC49D;
+        }
+        .service-icon svg,
+        .service-icon i[data-lucide] {
+            width: 28px;
+            height: 28px;
+            stroke: #5CC49D;
+            stroke-width: 2;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FAFBFF;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        .service-card p {
+            color: rgba(250, 251, 255, 0.7);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .what-we-do {
+                padding: 60px 0;
+            }
+            .what-we-do-header h2 {
+                font-size: 2rem;
+            }
+            .what-we-do-header p {
+                font-size: 1.1rem;
+            }
+            .tab-buttons {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .tab-button {
+                width: 100%;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .service-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    
+    <!-- Non-critical CSS - Load asynchronously -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="styles.css?v=1759850000">
+    <link rel="stylesheet" href="pill-nav-bundle.css">
+    <link rel="stylesheet" href="grow-process-bundle.css">
+    <link rel="stylesheet" href="chroma-grid-bundle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Tracking Script -->
+    <script src="https://tr.growaiagency.io/api/v1/tracking.js"></script>
+    
+</head>
+<body>
+    <!-- Beams Background for all pages -->
+    <div class="page-background">
+        <div id="beams-background" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 0; overflow: visible; pointer-events: none;">
+            <!-- Beams background will be rendered here -->
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <img src="images/logos/white and green.png" alt="Marin Solutions" class="nav-logo-img" loading="eager">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="process">Process</a></li>
+                <li><a href="about">About Us</a></li>
+                <li><a href="https://go.growaiagency.io/w-app?utm_source=Website&utm_medium=web&utm_content=index&el=Website-Homepage" class="cta-button">Get in touch</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+        </div>
+        <div class="hero-container">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Reclaim Your Billable Hours.<br>
+                        <span style="background-color: #5CC49D; padding: 0 0.3rem 0.1rem 0.3rem; border-radius: 4px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">Let AI Handle the Rest.</span>
+                    </h1>
+                    <p class="hero-subtitle">Marin Solutions builds custom automation infrastructures for Law Firms, CPA Agencies, and Consultancies. We eliminate manual data entry, automate client intake, and streamline document analysis so you can focus on high-value advisory work.</p>
+                    <div class="hero-buttons">
+                        <a href="https://go.growaiagency.io/w-app?utm_source=Website&utm_medium=web&utm_content=index&el=Website-Homepage" class="btn btn-primary">
+                            <span>Audit Your Workflow</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="dashboard-mockup">
+                        <div class="dashboard-header">
+                            <div class="dashboard-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="dashboard-title">Automation Dashboard</div>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="dashboard-stat-card">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-label">Hours Saved</div>
+                                    <div class="stat-value">120<span class="stat-unit">hrs/mo</span></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-chart">
+                                <div class="chart-bar" style="height: 60%; animation-delay: 0.1s;"></div>
+                                <div class="chart-bar" style="height: 80%; animation-delay: 0.2s;"></div>
+                                <div class="chart-bar" style="height: 100%; animation-delay: 0.3s;"></div>
+                                <div class="chart-bar" style="height: 75%; animation-delay: 0.4s;"></div>
+                                <div class="chart-bar" style="height: 90%; animation-delay: 0.5s;"></div>
+                            </div>
+                            <div class="dashboard-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-label">Tasks Automated</span>
+                                    <span class="metric-value">47</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Efficiency Gain</span>
+                                    <span class="metric-value">+340%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do">
+        <div class="what-we-do-container">
+            <div class="what-we-do-header" data-aos="fade-up">
+                <h2>What We Do</h2>
+                <p>Industry-specific AI solutions designed to eliminate manual work and maximize your billable hours</p>
+            </div>
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="lawyers">
+                        <i class="fas fa-gavel" style="margin-right: 0.5rem;"></i>
+                        For Lawyers
+                    </button>
+                    <button class="tab-button" data-tab="cpas">
+                        <i class="fas fa-calculator" style="margin-right: 0.5rem;"></i>
+                        For CPAs
+                    </button>
+                    <button class="tab-button" data-tab="consultants">
+                        <i class="fas fa-briefcase" style="margin-right: 0.5rem;"></i>
+                        For Consultants
+                    </button>
+                </div>
+                
+                <!-- Lawyers Tab Content -->
+                <div class="tab-content active" id="lawyers-content">
+                    <div class="services-grid">
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-icon">
+                                <i data-lucide="file-check-2"></i>
+                            </div>
+                            <h3>Smart Contract Review</h3>
+                            <p>AI that pre-reads contracts and flags risks before you do.</p>
+                        </div>
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="service-icon">
+                                <i data-lucide="message-square"></i>
+                            </div>
+                            <h3>Automated Client Intake</h3>
+                            <p>Chatbots that qualify leads and populate your CRM instantly.</p>
+                        </div>
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="service-icon">
+                                <i data-lucide="search"></i>
+                            </div>
+                            <h3>Case Research</h3>
+                            <p>Semantic search to find relevant case law in seconds, not hours.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CPAs Tab Content -->
+                <div class="tab-content" id="cpas-content">
+                    <div class="services-grid">
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-icon">
+                                <i data-lucide="receipt"></i>
+                            </div>
+                            <h3>Receipt Reconciliation</h3>
+                            <p>AI that categorizes expenses and detects anomalies automatically.</p>
+                        </div>
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="service-icon">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <h3>Tax Code Analysis</h3>
+                            <p>Instant answers to complex tax queries based on current regulations.</p>
+                        </div>
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="service-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <h3>Client Portal Automation</h3>
+                            <p>Auto-chasing clients for missing documents via email/SMS.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Consultants Tab Content -->
+                <div class="tab-content" id="consultants-content">
+                    <div class="services-grid">
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-icon">
+                                <i data-lucide="video"></i>
+                            </div>
+                            <h3>Meeting Intelligence</h3>
+                            <p>Auto-record, transcribe, and summarize client calls into action items.</p>
+                        </div>
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="service-icon">
+                                <i data-lucide="bar-chart-3"></i>
+                            </div>
+                            <h3>Data Synthesis</h3>
+                            <p>Turn raw client data into slide-ready charts and insights instantly.</p>
+                        </div>
+                        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="service-icon">
+                                <i data-lucide="file-edit"></i>
+                            </div>
+                            <h3>Proposal Generation</h3>
+                            <p>Generate 80% of a customized proposal based on previous successful templates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="how-we-work">
+        <div class="how-we-work-container">
+            <div class="how-we-work-header" data-aos="fade-up">
+                <h2>How We Work</h2>
+                <p>A streamlined 4-step process to transform your practice with AI automation</p>
+            </div>
+            <div class="process-flow">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Audit</h3>
+                        <p class="step-description">We analyze your current billable vs. non-billable hours.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Blueprint</h3>
+                        <p class="step-description">We design a custom AI architecture for your firm.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Build</h3>
+                        <p class="step-description">We develop and integrate the agents and automations.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Train</h3>
+                        <p class="step-description">We teach your team how to leverage the new tools.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve Section -->
+    <section class="industries">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Industries We Serve</h2>
+                <p>Specialized AI solutions tailored to your profession</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="industry-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Law Firms</h3>
+                    <p>Automate document review, contract analysis, legal research, client intake, and case management. Reduce billable hours on routine tasks and focus on high-value legal work.</p>
+                    <ul class="industry-features">
+                        <li><i class="fas fa-check"></i> Document automation & review</li>
+                        <li><i class="fas fa-check"></i> Contract analysis & extraction</li>
+                        <li><i class="fas fa-check"></i> Legal research automation</li>
+                        <li><i class="fas fa-check"></i> Client intake & communication</li>
+                        <li><i class="fas fa-check"></i> Case management systems</li>
+                    </ul>
+                </div>
+                
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="industry-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>CPA Practices</h3>
+                    <p>Streamline tax preparation, bookkeeping, financial analysis, and client reporting. Process returns faster, reduce errors, and provide better insights to your clients.</p>
+                    <ul class="industry-features">
+                        <li><i class="fas fa-check"></i> Tax document processing</li>
+                        <li><i class="fas fa-check"></i> Automated bookkeeping</li>
+                        <li><i class="fas fa-check"></i> Financial data analysis</li>
+                        <li><i class="fas fa-check"></i> Client report generation</li>
+                        <li><i class="fas fa-check"></i> Compliance monitoring</li>
+                    </ul>
+                </div>
+                
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="industry-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Business Consultants</h3>
+                    <p>Enhance client deliverables, automate research, generate insights, and scale your consulting practice. Deliver more value in less time with AI-powered tools.</p>
+                    <ul class="industry-features">
+                        <li><i class="fas fa-check"></i> Market research automation</li>
+                        <li><i class="fas fa-check"></i> Report & presentation generation</li>
+                        <li><i class="fas fa-check"></i> Data analysis & insights</li>
+                        <li><i class="fas fa-check"></i> Client communication automation</li>
+                        <li><i class="fas fa-check"></i> Project management tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="grow-process-section">
+        <div class="grow-process-glow"></div>
+        <div class="grow-process-container">
+            <div class="grow-process-grid">
+                <div class="grow-process-card" style="--animation-delay: 0ms;">
+                    <div class="grow-process-card-header">
+                        <div class="grow-process-letter">D</div>
+                        <h3 class="grow-process-title">Discovery & Assessment</h3>
+                    </div>
+                    <p class="grow-process-description">We analyze your current workflows, identify automation opportunities, and understand your unique business needs. This comprehensive assessment ensures we build solutions that deliver real value.</p>
+                    <ul class="grow-process-bullets">
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Workflow analysis & documentation</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Automation opportunity identification</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Business requirements gathering</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>ROI & impact assessment</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="grow-process-card" style="--animation-delay: 100ms;">
+                    <div class="grow-process-card-header">
+                        <div class="grow-process-letter">D</div>
+                        <h3 class="grow-process-title">Custom Solution Design</h3>
+                    </div>
+                    <p class="grow-process-description">Our team designs AI solutions tailored to your practice. We create detailed implementation plans, select the right tools, and ensure everything integrates seamlessly with your existing systems.</p>
+                    <ul class="grow-process-bullets">
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Custom AI solution architecture</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Tool selection & integration planning</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Detailed implementation roadmap</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>System compatibility verification</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="grow-process-card" style="--animation-delay: 200ms;">
+                    <div class="grow-process-card-header">
+                        <div class="grow-process-letter">I</div>
+                        <h3 class="grow-process-title">Implementation & Integration</h3>
+                    </div>
+                    <p class="grow-process-description">We handle the technical implementation, integrate with your current software, and ensure data security and compliance. Your team stays focused on client work while we handle the setup.</p>
+                    <ul class="grow-process-bullets">
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Technical setup & configuration</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Software integration & API connections</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Security & compliance verification</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Testing & quality assurance</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="grow-process-card" style="--animation-delay: 300ms;">
+                    <div class="grow-process-card-header">
+                        <div class="grow-process-letter">T</div>
+                        <h3 class="grow-process-title">Training & Support</h3>
+                    </div>
+                    <p class="grow-process-description">We train your team on the new systems, provide comprehensive documentation, and offer ongoing support. You'll have the knowledge and resources to maximize your AI investment.</p>
+                    <ul class="grow-process-bullets">
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Comprehensive team training sessions</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Detailed documentation & guides</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Ongoing support & optimization</span>
+                        </li>
+                        <li>
+                            <svg class="grow-process-check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#5CC49D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>Regular system updates & improvements</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Why Choose Marin Solutions</h2>
+                <p>Real results for professional practices</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Save Time</h3>
+                    <p>Automate repetitive tasks and reclaim 10-20 hours per week. Focus on high-value work that grows your practice.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Reduce Costs</h3>
+                    <p>Cut operational expenses by 30-50% through intelligent automation. Lower overhead means higher profitability.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Scale Operations</h3>
+                    <p>Handle more clients and cases without proportionally increasing staff. Grow your practice efficiently.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Industry-Specific</h3>
+                    <p>Solutions built for your profession. We understand compliance, regulations, and workflows unique to law, accounting, and consulting.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Secure & Compliant</h3>
+                    <p>Enterprise-grade security and compliance with industry standards. Your data and client information are protected.</p>
+                </div>
+                
+                <div class="benefit-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Ongoing Support</h3>
+                    <p>Dedicated support team to help you optimize and expand your AI solutions as your practice grows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Success Stories</h2>
+                <p>See how we've transformed professional practices</p>
+            </div>
+            <div class="case-studies-grid">
+                <div class="case-study-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="case-study-content">
+                        <div class="case-study-category">Law Firm</div>
+                        <h4>Mid-Size Law Firm Saves 15 Hours Per Week</h4>
+                        <p class="story-excerpt">A 25-attorney firm implemented our document automation and contract analysis system. They now process contracts 80% faster, reduced document review time by 15 hours per week, and improved client response times significantly.</p>
+                        <div class="case-study-metrics">
+                            <div class="metric">
+                                <span class="metric-value">15hrs</span>
+                                <span class="metric-label">Saved per week</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">80%</span>
+                                <span class="metric-label">Faster processing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="case-study-content">
+                        <div class="case-study-category">CPA Practice</div>
+                        <h4>Tax Practice Processes 3x More Returns</h4>
+                        <p class="story-excerpt">A regional CPA firm automated their tax document processing and client communication. During tax season, they handled 3x more returns with the same team, reduced errors by 45%, and improved client satisfaction scores.</p>
+                        <div class="case-study-metrics">
+                            <div class="metric">
+                                <span class="metric-value">3x</span>
+                                <span class="metric-label">More returns</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">45%</span>
+                                <span class="metric-label">Fewer errors</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="case-study-content">
+                        <div class="case-study-category">Consulting Firm</div>
+                        <h4>Consulting Firm Doubles Client Capacity</h4>
+                        <p class="story-excerpt">A business consulting firm implemented AI-powered research and report generation. They doubled their client capacity, reduced report creation time from 20 hours to 4 hours, and increased revenue by 60% in the first year.</p>
+                        <div class="case-study-metrics">
+                            <div class="metric">
+                                <span class="metric-value">2x</span>
+                                <span class="metric-label">Client capacity</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">60%</span>
+                                <span class="metric-label">Revenue increase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>Ready to Transform Your Practice?</h2>
+                <p>Join law firms, CPA practices, and consulting businesses that are already saving time and scaling with AI</p>
+                <div class="cta-buttons">
+                    <a href="https://go.growaiagency.io/w-app?utm_source=Website&utm_medium=web&utm_content=index&el=Website-Homepage" class="btn btn-primary">
+                        <span>Schedule a Free Consultation</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/logos/All white.png" alt="Marin Solutions" class="footer-logo" loading="lazy">
+                    <p>Implementing AI solutions for Law Firms, CPA Practices, and Consulting Businesses.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="process">Process</a></li>
+                        <li><a href="about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://go.growaiagency.io/w-app?utm_source=Website&utm_medium=web&utm_content=index&el=Website-Homepage">Get in touch</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61579044325984" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/thejakearnold" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Marin Solutions | All Rights Reserved</p>
+                <div class="footer-links">
+                    <a href="privacy-policy">Privacy Policy</a>
+                    <span class="separator">•</span>
+                    <a href="terms-of-service">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Critical JavaScript - Load immediately -->
+    <script src="script.js?v=1759850000"></script>
+    <script src="performance-optimization.js?v=1759850000"></script>
+    
+    <!-- Non-critical JavaScript - Load asynchronously -->
+    <script>
+        // Lazy load AOS and other non-critical scripts
+        function loadNonCriticalScripts() {
+            const aosScript = document.createElement('script');
+            aosScript.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+            aosScript.async = true;
+            aosScript.onload = function() {
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 800,
+                        easing: 'ease-in-out',
+                        once: true,
+                        offset: 100
+                    });
+                }
+            };
+            document.head.appendChild(aosScript);
+        }
+        
+        // Load non-critical scripts after page load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadNonCriticalScripts);
+        } else {
+            loadNonCriticalScripts();
+        }
+    </script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        // Prevent multiple service worker registrations
+        if ('serviceWorker' in navigator && !window.serviceWorkerRegistered) {
+            window.serviceWorkerRegistered = true;
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js?v=1759850000')
+                    .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                        // Only check for updates, don't auto-reload
+                        registration.addEventListener('updatefound', function() {
+                            console.log('Service worker update found, but not auto-reloading');
+                        });
+                    })
+                    .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+    
+    <!-- PillNav Bundle (built with npm run build:pillnav) -->
+    <!-- Temporarily disabled - using regular navbar instead -->
+    <!-- <script src="pill-nav-bundle.js"></script> -->
+    
+    <!-- Beams Background Bundle (built with npm run build:beams-bg) -->
+    <link rel="stylesheet" href="beams-background-bundle.css">
+    <script src="beams-background-bundle.js"></script>
+    
+    <!-- Grow Process Bundle (built with npm run build:growprocess) -->
+    <script src="grow-process-bundle.js"></script>
+    
+    <!-- Tab Component Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide icons
+            function initLucideIcons() {
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                } else {
+                    // Retry if Lucide hasn't loaded yet
+                    setTimeout(initLucideIcons, 100);
+                }
+            }
+            initLucideIcons();
+            
+            // Tab switching functionality
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    const targetContent = document.getElementById(targetTab + '-content');
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                        
+                        // Re-initialize Lucide icons for the new tab content
+                        setTimeout(() => {
+                            if (typeof lucide !== 'undefined') {
+                                lucide.createIcons();
+                            }
+                        }, 150);
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <!-- Initialize Grow Process Cards -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.grow-process-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('grow-process-card-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
+    
+    <!-- Debug: Check if Beams initialized -->
+    <script>
+        setTimeout(function() {
+            const container = document.getElementById('beams-background');
+            if (container) {
+                const canvas = container.querySelector('canvas');
+                if (canvas) {
+                    console.log('✅ Beams background canvas found and rendered');
+                } else {
+                    console.warn('⚠️ Beams container found but no canvas rendered');
+                }
+            } else {
+                console.error('❌ Beams background container not found');
+            }
+        }, 1000);
+    </script>
+    
+    <!-- Debug script to prevent unwanted reloads -->
+    <script>
+        // Prevent accidental reloads
+        let reloadCount = 0;
+        const maxReloads = 3;
+        
+        window.addEventListener('beforeunload', function(e) {
+            reloadCount++;
+            if (reloadCount > maxReloads) {
+                console.warn('Multiple reloads detected, this might indicate an issue');
+            }
+        });
+        
+        // Reset reload count after 5 seconds
+        setTimeout(function() {
+            reloadCount = 0;
+        }, 5000);
+    </script>
+</body>
+</html>
+
