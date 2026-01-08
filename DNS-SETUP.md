@@ -85,3 +85,4 @@ You should see the GitHub Pages IP addresses.
 - **Only root works**: Check CNAME record for www subdomain
 - **HTTPS not available**: Wait for DNS to fully propagate, then enable in GitHub Pages settings
 
+

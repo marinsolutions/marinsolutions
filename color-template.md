@@ -76,3 +76,4 @@ This document defines the complete color palette for the Marin Solutions website
 - **Blue Glow Strong**: `rgba(0, 179, 255, 0.5)` - For emphasis
 - **Dark Shadow**: `rgba(0, 0, 0, 0.4)` - For depth
 
+
